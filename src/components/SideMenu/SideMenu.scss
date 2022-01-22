@@ -1,0 +1,42 @@
+.sidemenu-container {
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  -webkit-box-shadow: -6px 4px 15px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: -6px 4px 15px 0px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.sidemenu-open {
+  width: 300px;
+}
+
+.sidemenu-contents {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.sidemenu-links {
+  flex-direction: column;
+  list-style-type: none;
+  margin-top: 3rem;
+}
+
+.sidemenu-links li {
+  padding: 1rem 0;
+}
+
+.sidemenu-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -7;
+}
