@@ -1,0 +1,24 @@
+@import "../../../styles/global.scss";
+
+.benefits-container {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.benefit {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $navbar-background-color;
+  padding: 1rem;
+  align-items: center;
+  min-width: 200px;
+}
+
+.benefit h5 {
+  text-transform: uppercase;
+}

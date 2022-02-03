@@ -1,0 +1,78 @@
+@import "../../../styles/global.scss";
+
+.sections-container {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 4;
+  height: 500px;
+  gap: 1rem;
+}
+
+.section {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-mens {
+  background-color: $navbar-background-color;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.section-womens {
+  background-color: $navbar-background-color;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.section-how-to {
+  background-color: $navbar-background-color;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.section-trends {
+  background-color: $navbar-background-color;
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
+
+.section-link {
+  text-transform: uppercase;
+  color: $accent-color;
+}
+
+@media (min-width: 790px) {
+  .sections-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 3;
+    height: 500px;
+  }
+
+  .section-mens {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  .section-womens {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  .section-how-to {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .section-trends {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+}

@@ -1,13 +1,15 @@
 @import "../../styles/global.scss";
 
+.herobanner {
+  background-color: $navbar-background-color;
+  overflow: hidden;
+}
+
 .herobanner-container {
   width: 100%;
   height: 70vh;
-  background-color: $navbar-background-color;
-  overflow: hidden;
   flex-flow: column;
   display: flex;
-  padding: 0 1rem 1rem 1rem;
 }
 
 .herobanner-content {
