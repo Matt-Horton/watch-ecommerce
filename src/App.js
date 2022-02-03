@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import SideMenu from './components/SideMenu/SideMenu';
 import HeroBanner from './components/HeroBanner/HeroBanner';
 import Catalog from './components/Catalog/Catalog';
+import Subscribe from './components/Subscribe/Subscribe';
 
 function App() {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ function App() {
       <SideMenu open={sideMenuOpen} setOpen={setSideMenuOpen} />
       <HeroBanner />
       <Catalog />
+      <Subscribe />
     </div>
   );
 }
