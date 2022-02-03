@@ -1,0 +1,90 @@
+@import "../../styles/global.scss";
+
+.herobanner-container {
+  width: 100%;
+  height: 70vh;
+  background-color: $navbar-background-color;
+  overflow: hidden;
+  flex-flow: column;
+  display: flex;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.herobanner-content {
+  text-align: center;
+}
+
+.herobanner-large-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.herobanner-small-text {
+  color: #6e6e6e;
+  line-height: 1.5rem;
+  text-align: center;
+  display: none;
+}
+
+.herobanner-btn {
+  border: 2px solid $accent-color;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  color: $accent-color;
+  text-transform: capitalize;
+  font-weight: 600;
+  background-color: $navbar-background-color;
+}
+
+.herobanner-image-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.herobanner-image-container img {
+  object-fit: scale-down;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  .herobanner-btn {
+    width: 300px;
+  }
+  .herobanner-large-text {
+    text-align: center;
+  }
+  .herobanner-container {
+    flex: 1;
+  }
+  .herobanner-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .herobanner-content {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 790px) {
+  .herobanner-container {
+    flex-direction: row-reverse;
+  }
+  .herobanner-large-text {
+    text-align: left;
+  }
+  .herobanner-small-text {
+    display: block;
+    text-align: left;
+    margin: 1.5rem 0;
+  }
+  .herobanner-content {
+    text-align: left;
+  }
+}
