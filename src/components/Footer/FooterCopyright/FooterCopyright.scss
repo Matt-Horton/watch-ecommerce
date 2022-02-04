@@ -1,0 +1,28 @@
+.footer-copyright-container {
+  background-color: #000;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.footer-copyright h5 {
+  color: #e0e0e0;
+  min-width: 200px;
+}
+
+.footer-social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.footer-social-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
