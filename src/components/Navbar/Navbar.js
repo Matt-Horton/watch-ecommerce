@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.scss';
 import { HiMenuAlt1, HiSearch, HiOutlineShoppingCart } from 'react-icons/hi';
 import { FaCrown } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ sideMenuOpen, setSideMenuOpen }) => {
   return (
@@ -11,9 +12,9 @@ const Navbar = ({ sideMenuOpen, setSideMenuOpen }) => {
           <div className="navbar-content">
             <FaCrown size={30} className="brand-logo" />
             <ul className="navbar-links">
-              <li><a href="#mens">MENS</a></li>
-              <li><a href="#ladies">LADIES</a></li>
-              <li><a href="#brands">BRANDS</a></li>
+              <li><Link to="/mens">MENS</Link></li>
+              <li><Link to="/womens">WOMENS</Link></li>
+              <li><Link to="/brands">BRANDS</Link></li>
             </ul>
             <div className="navbar-right">
               <HiOutlineShoppingCart size={25} />
