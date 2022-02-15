@@ -21,9 +21,20 @@
   height: 350px;
   padding: 1rem;
   background-color: $navbar-background-color;
+  overflow: hidden;
+  position: relative;
 }
 
-.product-info {
+.product-image {
+  height: 350px;
+  margin: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popular-product-info {
   position: relative;
   height: 100%;
 }

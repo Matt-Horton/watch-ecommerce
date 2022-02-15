@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import MensCatalog from './pages/MensCatalog';
+import Product from './pages/Product/Product';
 
 function App() {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/mens" element={<MensCatalog />} />
+          <Route path="/product/:id" element={<Product />} />
         </Routes>
 
         <Footer />

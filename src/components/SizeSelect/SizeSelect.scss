@@ -1,0 +1,9 @@
+@import "../../styles/global.scss";
+
+.size-select {
+  border: 2px solid $accent-color;
+  padding: 1rem;
+  width: 200px;
+  color: $accent-color;
+  font-weight: 600;
+}

@@ -12,3 +12,9 @@ export const fetchPopularProducts = async () => {
 
   return products;
 }
+
+export const fetchProduct = async (id) => {
+  const product = await client.product.fetch(id);
+
+  return product;
+}

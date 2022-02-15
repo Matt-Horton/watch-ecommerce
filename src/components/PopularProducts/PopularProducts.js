@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './PopularProducts.scss';
 import { fetchPopularProducts } from '../../products';
 import { HiOutlineHeart, HiOutlineShoppingCart } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 
 export default function PopularProducts() {
@@ -25,13 +26,16 @@ export default function PopularProducts() {
         <div className="products-container">
           {popularProducts.map(product => {
             return (
-              <div className="product" key={product.id}>
-                <div className="product-info">
-                  <h4 className="product-title">{product.title}</h4>
-                  <HiOutlineHeart size={20} className="product-favorite" />
-                  <HiOutlineShoppingCart size={20} className="product-basket" />
+              <Link to={`/product/${product.id}`} key={product.id}>
+                <div className="product">
+                  <img src={product.images[0].src} className="product-image" />
+                  <div className="popular-product-info">
+                    <h4 className="product-title">{product.title}</h4>
+                    <HiOutlineHeart size={20} className="product-favorite" />
+                    <HiOutlineShoppingCart size={20} className="product-basket" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
         </div>
