@@ -21,6 +21,10 @@ $accent-color: #ca7e39;
   background: inherit;
 }
 
+a {
+  color: #000;
+}
+
 @media (min-width: 550px) {
   .container {
     padding: 0rem 2rem;

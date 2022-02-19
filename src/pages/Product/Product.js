@@ -4,8 +4,11 @@ import BuyButton from '../../components/BuyButton.js/BuyButton';
 import SizeSelect from '../../components/SizeSelect/SizeSelect';
 import { fetchProduct } from '../../products';
 import './Product.scss';
+import { useCheckoutContext } from '../../context/CheckoutContext';
 
 export default function Product() {
+
+  const { addItemToCart } = useCheckoutContext();
 
   // Access Product ID from URL param
   let { id } = useParams();
@@ -21,6 +24,12 @@ export default function Product() {
       }
     })();
   }, [id]);
+
+  const addToCart = () => {
+    console.log(`Adding item to cart with ID: ${id}`);
+
+    addItemToCart(id);
+  }
 
   return (
     <>
@@ -38,7 +47,7 @@ export default function Product() {
                 Aliquam id orci pellentesque, aliquam sapien et, porttitor nunc. Nullam at risus efficitur.</p>
               <div className="product-info-buttons">
                 <SizeSelect />
-                <BuyButton />
+                <BuyButton onPress={addToCart} />
               </div>
             </div>
           </div>

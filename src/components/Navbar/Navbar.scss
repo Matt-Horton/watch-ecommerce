@@ -12,6 +12,10 @@ header {
   flex: 1;
 }
 
+.brand-logo {
+  color: #000;
+}
+
 .navbar-content {
   flex: 1;
   display: flex;
@@ -39,6 +43,7 @@ header {
 .navbar-right {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .navbar-right-menu {

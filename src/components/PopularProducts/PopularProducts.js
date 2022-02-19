@@ -14,10 +14,21 @@ export default function PopularProducts() {
       const retrievedProducts = await fetchPopularProducts();
 
       setPopularProducts(retrievedProducts);
+
+      for (let popProduct in retrievedProducts) {
+        console.log(popProduct.options.find(option => option.name === 'Brand').values[0].value);
+      }
     };
 
     fetchProducts();
   }, []);
+
+  const parseProductBrand = (product) => {
+
+    let brand = product.options.find(option => option.name === 'Brand');
+
+    return brand ? brand.values[0].value : "";
+  }
 
   return (
     <section className="popular-products-section">
@@ -29,10 +40,13 @@ export default function PopularProducts() {
               <Link to={`/product/${product.id}`} key={product.id}>
                 <div className="product">
                   <img src={product.images[0].src} className="product-image" />
-                  <div className="popular-product-info">
-                    <h4 className="product-title">{product.title}</h4>
-                    <HiOutlineHeart size={20} className="product-favorite" />
-                    <HiOutlineShoppingCart size={20} className="product-basket" />
+                  <div className="popular-product-info-container">
+                    <div className="popular-product-info">
+                      <h4 className="product-title">{product.title}</h4>
+                      <h5 className="product-brand">{parseProductBrand(product)}</h5>
+                      <HiOutlineHeart size={20} className="product-favorite" />
+                      <HiOutlineShoppingCart size={20} className="product-basket" />
+                    </div>
                   </div>
                 </div>
               </Link>

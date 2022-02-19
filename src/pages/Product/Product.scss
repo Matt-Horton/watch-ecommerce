@@ -2,23 +2,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  flex: 1;
+  padding: 4rem 4rem;
+  align-items: center;
 }
 
 .product-info-image-container {
   justify-content: center;
   align-items: center;
   flex: 1;
+  display: flex;
 }
 
 .product-image-preview {
-  width: 100%;
-  max-width: 500px;
-}
-
-.product-info-container {
-  flex: 1;
-  padding: 0rem 4rem;
-  align-items: center;
+  max-height: 500px;
 }
 
 .product-info-brand {

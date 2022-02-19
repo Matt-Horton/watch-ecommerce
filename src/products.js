@@ -18,3 +18,8 @@ export const fetchProduct = async (id) => {
 
   return product;
 }
+
+export const checkout = async () => {
+
+  const checkout = await client.checkout.create();
+}
