@@ -31,6 +31,13 @@ export default function Product() {
     addItemToCart(id);
   }
 
+  const parseProductBrand = (product) => {
+
+    let brand = product.options.find(option => option.name === 'Brand');
+
+    return brand ? brand.values[0].value : "";
+  }
+
   return (
     <>
       {product &&
@@ -40,7 +47,7 @@ export default function Product() {
           </div>
           <div className="product-info-container">
             <div className="product-info">
-              <h4 className="product-info-brand">{product.options[1].values[0].value}</h4>
+              <h4 className="product-info-brand">{parseProductBrand(product)}</h4>
               <h1 className="product-info-title">{product.title}</h1>
               <h5 className="product-info-price">£{product.variants[0].price}</h5>
               <p className="product-info-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
